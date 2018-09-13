@@ -1,7 +1,7 @@
 var Node = require('./Tree');
 var assert = require('assert');
 
-//test a tree using simple, small integers
+//Create nodes using simple, small integers
 var test1RootNode = new Node(0),
     test1Node1 = new Node(1),
     test1Node2 = new Node(2),
@@ -11,6 +11,7 @@ var test1RootNode = new Node(0),
     test1Node6 = new Node(6),
     test1Node7 = new Node(7);
 
+// Create tree structure
 test1RootNode.left = test1Node1;
 test1RootNode.right = test1Node3;
 test1Node1.left  = test1Node2;
@@ -21,17 +22,18 @@ test1Node3.right = test1Node7;
 
 assert.equal(findMaxInTree(test1RootNode), 7);
 
-//Test the negative/zero/positive boundry
+//Create nodes using negative/zero/positive boundry
 var test2RootNode = new Node(-1),
     test2Node1 = new Node(0),
     test2Node2 = new Node(1);
 
+// Create tree structure
 test2RootNode.left  = test2Node2;
 test2RootNode.right = test2Node1;
 
 assert.equal(findMaxInTree(test2RootNode), 1);
 
-//Test the maximum integer
+//Create nodes using the maximum integer
 var test3RootNode = new Node(0),
     test3Node1 = new Node(1),
     test3Node2 = new Node(2),
@@ -40,6 +42,7 @@ var test3RootNode = new Node(0),
     test3Node5 = new Node(5),
     test3Node6 = new Node(Number.MAX_SAFE_INTEGER);
 
+// Create tree structure
 test3RootNode.left = test3Node1;
 test3Node1.left = test3Node2;
 test3Node2.left = test3Node3;
@@ -54,6 +57,7 @@ var test4RootNode = new Node(-1),
     test4Node1 = new Node(null),
     test4Node2 = new Node();
 
+// Create tree structure
 test4RootNode.left  = test4Node1;
 test4RootNode.right = test4Node2;
 

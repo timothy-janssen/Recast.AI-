@@ -33,7 +33,7 @@ test2RootNode.right = test2Node1;
 
 assert.equal(findMax(test2RootNode), 1);
 
-//Create nodes using the maximum integer
+//Create node using the maximum integer
 var test3RootNode = new Node(0),
     test3Node1 = new Node(1),
     test3Node2 = new Node(2),
@@ -52,13 +52,18 @@ test3Node5.left = test3Node6;
 
 assert.equal(findMax(test3RootNode), Number.MAX_SAFE_INTEGER);
 
-//Test that null/undefined Node are created with value of 0
+//Test that invalid nodes are created with value of 0
 var test4RootNode = new Node(-1),
     test4Node1 = new Node(null),
-    test4Node2 = new Node();
+    test4Node2 = new Node('Invalid'),
+    test4Node3 = new Node();
 
-// Create tree structure
+// Test each invalid node seperately
 test4RootNode.left  = test4Node1;
-test4RootNode.right = test4Node2;
-
 assert.equal(findMax(test4RootNode), 0);
+test4RootNode.left  = test4Node2;
+assert.equal(findMax(test4RootNode), 0);
+test4RootNode.left  = test4Node3;
+assert.equal(findMax(test4RootNode), 0);
+
+

@@ -20,7 +20,7 @@ test1Node2.right = test1Node5;
 test1Node3.left  = test1Node6;
 test1Node3.right = test1Node7;
 
-assert.equal(findMaxInTree(test1RootNode), 7);
+assert.equal(findMax(test1RootNode), 7);
 
 //Create nodes using negative/zero/positive boundry
 var test2RootNode = new Node(-1),
@@ -31,7 +31,7 @@ var test2RootNode = new Node(-1),
 test2RootNode.left  = test2Node2;
 test2RootNode.right = test2Node1;
 
-assert.equal(findMaxInTree(test2RootNode), 1);
+assert.equal(findMax(test2RootNode), 1);
 
 //Create nodes using the maximum integer
 var test3RootNode = new Node(0),
@@ -50,7 +50,7 @@ test3Node3.left = test3Node4;
 test3Node4.left = test3Node5;
 test3Node5.left = test3Node6;
 
-assert.equal(findMaxInTree(test3RootNode), Number.MAX_SAFE_INTEGER);
+assert.equal(findMax(test3RootNode), Number.MAX_SAFE_INTEGER);
 
 //Test that null/undefined Node are created with value of 0
 var test4RootNode = new Node(-1),
@@ -61,4 +61,4 @@ var test4RootNode = new Node(-1),
 test4RootNode.left  = test4Node1;
 test4RootNode.right = test4Node2;
 
-assert.equal(findMaxInTree(test4RootNode), 0);
+assert.equal(findMax(test4RootNode), 0);
